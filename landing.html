@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NextGen Prototype Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #0056b3;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .banner, .section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .banner {
+            text-align: center;
+        }
+
+        .banner h2 {
+            margin-top: 0;
+        }
+
+        .section h2 {
+            color: #0056b3;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.8em;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+        .testimonial {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .testimonial img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin: 20px 0;
+        }
+
+        .testimonial blockquote {
+            font-style: italic;
+            color: #555;
+        }
+
+        .testimonial .customer-name {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #0056b3;
+        }
+
+        .testimonial .customer-company {
+            color: #777;
+            font-size: 0.9em;
+        }
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+            text-align: center;
+        }
+
+        .service-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-item img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .service-item h3 {
+            margin: 10px 0;
+            color: #0056b3;
+        }
+
+        .service-item p {
+            color: #555;
+        }
+        .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.about-content {
+    flex: 1;
+    max-width: 50%;
+    padding: 10px;
+}
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.about-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    text-align: left;
+    margin: 10px 0;
+}
+
+#consultation {
+    text-align: center;
+    padding: 20px;
+}
+
+.consultation-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.about-video {
+    margin: 10px;
+    flex-basis: 45%; /* Adjust this value as needed */
+    max-width: 400px; /* Set a maximum width for the video */
+}
+
+.about-video video {
+    width: 100%; /* Makes the video responsive */
+    height: auto;
+    border-radius: 10px; /* Optional: for rounded corners */
+}
+
+.about-text {
+    margin: 10px;
+    flex-basis: 45%; /* Adjust this value as needed */
+}
+
+.video-buttons button {
+    margin-top: 10px;
+    /* Add more button styling here */
+}
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="l.png" alt="NextGen Prototype Solutions Logo">
+    <h1>NextGen Prototype Solutions</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#stories">Success Stories</a></li>
+            <li><a href="#consultation">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+<!-- Existing HTML content -->
+
+<script>
+    function changeVideo(sourceUrl) {
+        var videoPlayer = document.getElementById('videoPlayer');
+        videoPlayer.src = sourceUrl;
+        videoPlayer.load();
+        videoPlayer.play();
+    }
+</script>
+
+<div class="container">
+    <section class="banner" id="home">
+        <h2>Innovate with Intelligence</h2>
+        <p>Transforming Concepts into AI-Enhanced Prototypes</p>
+        <button>Discover How</button>
+    </section>
+
+    <section class="section" id="about">
+        <h2>About Us</h2>
+        <div class="about-video">
+            <video id="videoPlayer" controls>
+                <source src="pitch_en.mov" type="video/mp4" label="English" selected="true">
+                <source src="pitch_de.mp4" type="video/mp4" label="Deutsch">
+                <source src="pitch_fr.mp4" type="video/mp4" label="Français">
+                <source src="pitch_ar.mp4" type="video/mp4" label="العربية">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-buttons">
+                <button onclick="changeVideo('pitch_en.mov')">English</button>
+                <button onclick="changeVideo('pitch_de.mp4')">Deutsch</button>
+                <button onclick="changeVideo('pitch_fr.mp4')">Français</button>
+                <button onclick="changeVideo('pitch_ar.mp4')">العربية</button>
+            </div>
+        </div>
+
+
+        <div class="about-container">
+            <div class="about-card">
+                <img src="team.png" alt="Our Team" class="about-image">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>At NextGen Prototype Solutions, we blend AI technology with expert prototyping to turn your innovative ideas into testable, market-ready products. Founded in [Year], our journey has been about pioneering AI application in prototyping.</p>
+                </div>
+            </div>
+            <div class="about-card">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>To revolutionize the prototyping process through AI, ensuring faster, more efficient, and cost-effective development for inventors and companies alike.</p>
+                </div>
+                <div class="about-text">
+                    <h3>Why Choose Us</h3>
+                    <p>We don't just build prototypes; we build the future. Partner with us to experience a journey of technological innovation and business success.</p>
+                </div>
+            </div>
+            <div class="about-card">
+                <div class="about-text">
+                    <h3>Our Team</h3>
+                    <p>Comprising industry veterans and AI experts, our team is dedicated to providing unparalleled service and innovative solutions. Meet our team of passionate innovators [Link to Team Page or Section].</p>
+                </div>
+                <button onclick="location.href='#contact'">Free Consultation</button>
+            </div>
+    
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service-item">
+                <img src="icon1.png" alt="AI-Driven Prototyping">
+                <h3>AI-Driven Prototyping</h3>
+                <p>Revolutionize product development with our AI-driven approach.</p>
+            </div>
+            <div class="service-item">
+                <img src="icon2.png" alt="Industry-Specific Solutions">
+                <h3>Industry-Specific Solutions</h3>
+                <p>Customized solutions tailored for different industry needs.</p>
+            </div>
+            <div class="service-item">
+                <img src="icon3.png" alt="Rapid Development & Testing">
+                <h3>Rapid Development & Testing</h3>
+                <p>Accelerate your product's journey from concept to market.</p>
+            </div>
+            <div class="service-item">
+                <img src="icon4.png" alt="Consultation Services">
+                <h3>Consultation Services</h3>
+                <p>Expert guidance to navigate your product development challenges.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="stories">
+        <h2>Success Stories</h2>
+        <!-- Include case studies and client testimonials here -->
+        <div class="container">
+            <section class="testimonial">
+                <img src="customer.png" alt="Arjun Patel">
+                <blockquote>"Partnering with NextGen Prototype Solutions was a game-changer for us at TechSphere Innovations. Their AI-driven approach to prototyping not only accelerated our development process but also provided insights that were crucial for our product's success."</blockquote>
+                <div class="customer-name">Arjun Patel</div>
+                <div class="customer-company">TechSphere Innovations</div>
+                
+            </section>
+        
+            <div class="container">
+                <section class="testimonial">
+                    <img src="customer2.png" alt="Elena Rodriguez">
+                    <blockquote>"Our collaboration with NextGen Prototype Solutions was pivotal for GreenTech Dynamics. Their innovative AI-driven prototyping approach not only enhanced our product development but also provided strategic insights for sustainable solutions."</blockquote>
+                    <div class="customer-name">Elena Rodriguez</div>
+                    <div class="customer-company">GreenTech Dynamics</div>
+                </section>
+            </div>
+        
+        </div>
+    
+    </section>
+<!-- Get Started with a Free Consultation Section -->
+<section id="consultation">
+    <h2>Get Started with a Free Consultation</h2>
+    <div class="consultation-container">
+        <img src="consultation.png" alt="Free Consultation" style="max-width:100%; height:auto; border-radius:10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <p>Ready to bring your ideas to life? Connect with our experts and kickstart your project with a free, no-obligation consultation. Let's discuss how we can turn your innovative concepts into reality.</p>
+        <button onclick="location.href='#contact'">Book Your Free Consultation</button>
+    </div>
+</div>
+
+<footer>
+    <p>Contact Information</p>
+    <p>Social Media Links</p>
+    <p>Newsletter Sign-Up</p>
+    <p>Legal Information</p>
+</footer>
+
+</body>
+</html>
